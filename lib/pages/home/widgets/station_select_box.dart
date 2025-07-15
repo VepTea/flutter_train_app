@@ -4,7 +4,7 @@ import 'package:flutter_train_app/pages/home/classes/variable_classes.dart';
 
 class StationSelectBox extends StatelessWidget {
   StationSelectBox(
-    this.stationBoxData, //모든 정보들을 넘겨줌 (클래스로 정의되어있는 거)
+    this.stationBoxData, //출발역, 도착역, 역목록을 넘겨줌 (클래스로 정의되어있는 거)
     this.setDepartOrArrive, // ← 이 부분 추가!
     this.setDepartStationName, // 출발역 이름 변경 함수
     this.setArriveStationName, // 도착역 이름 변경 함수
@@ -33,7 +33,7 @@ class StationSelectBox extends StatelessWidget {
               // context가 없으면 Navigator가 동작하지 않거나 에러가 발생합니다.
               label: '출발역',
               stationName: stationBoxData.departStationName,
-              departOrArrive: stationBoxData.departOrArrive,
+              departOrArrive: true,
               setDepartOrArrive: setDepartOrArrive,
               stationList: stationBoxData.stationList,
               setDepartStationName: setDepartStationName,
@@ -43,7 +43,7 @@ class StationSelectBox extends StatelessWidget {
               context: context, // context 넘기기!
               label: '도착역',
               stationName: stationBoxData.arriveStationName,
-              departOrArrive: !stationBoxData.departOrArrive,
+              departOrArrive: false,
               setDepartOrArrive: setDepartOrArrive,
               stationList: stationBoxData.stationList,
               setDepartStationName: setDepartStationName,

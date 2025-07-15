@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   //지금 터치한 위젯이 출발역 위젯이냐, 도착역 위젯이냐에 따라서
   //stationList에서 앱바타이틀과, 역 선택 했을 시 그 역 이름을 어디 변수에 넣을것인가가 달라짐.
   bool departOrArrive = true;
-  //기본값으로 출발역 위젯 true라고 치고, 도착역 위젯을 false라고 치치자
+  //기본값으로 출발역 위젯 true라고 치고, 도착역 위젯을 false라고 치자
   //만약 출발역 위젯을 터치했을 땐 departOrArrive를 true로 설정하고,
   //도착역 위젯을 터치했을 땐 departOrArrive를 false로 설정하는 콜백함수를 만들어야 함.
   void setDepartOrArrive(bool newValue) {
@@ -28,17 +28,17 @@ class _HomePageState extends State<HomePage> {
   }
 
   //출발역과 도착역의 이름을 새롭게 저장하는 변수(사실 함수)
-  String departStationName = '선택'; // 초기값
   setDepartStationName(String newValue) {
     setState(() {
       stationBoxData.departStationName = newValue;
+      print('출발역 변경됨: ${stationBoxData.departStationName}');
     });
   }
 
-  String arriveStationName = '선택'; // 초기값
   setArriveStationName(String newValue) {
     setState(() {
       stationBoxData.arriveStationName = newValue;
+      print('도착역 변경됨: ${stationBoxData.arriveStationName}');
     });
   }
 
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                 setArriveStationName, // 도착역 이름 변경 함수
               ),
               SizedBox(height: 20),
-              TripConfirmButton(),
+              TripConfirmButton(stationBoxData: stationBoxData),
             ],
           ),
         ),
