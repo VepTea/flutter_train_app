@@ -10,15 +10,15 @@ class StationBoxData {
   //출발역 이름과 도착역 이름 초기값으로 '선택'이라고 설정해놓음
 
   bool departOrArrive = true;
+  //지금 터치한 위젯이 출발역 위젯이냐, 도착역 위젯이냐에 따라서
+  //stationList에서 앱바타이틀과, 역 선택 했을 시 그 역 이름을 어디 변수에 넣을것인가가 달라짐.
+
   //기본값으로 출발역 위젯 true라고 치고, 도착역 위젯을 false라고 치치자
   //만약 출발역 위젯을 터치했을 땐 departOrArrive를 true로 설정하고,
   //도착역 위젯을 터치했을 땐 departOrArrive를 false로 설정하는 콜백함수를 만들어야 함.
   //그래서 출발역 위젯을 터치했을 땐 출발역 이름을 변경하고,
   //도착역 위젯을 터치했을 땐 도착역 이름을 변경하는 함수를 만들어야 함.
   //그건 callback_classes.dart에 정의해놓음 (콜백함수)
-
-  //stationSelectBox에서 지금 터치한 위젯이 출발역 위젯이냐, 도착역 위젯이냐에 따라서
-  //stationList에서 앱바타이틀과, 역 선택 했을 시 그 역 이름을 어디 변수에 넣을것인가가 달라짐.
 
   List<String> stationList = [
     '수서',

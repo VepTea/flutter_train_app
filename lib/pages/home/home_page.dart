@@ -15,12 +15,6 @@ StationBoxData stationBoxData = StationBoxData();
 //여기 안에는 출발역 이름, 도착역 이름, 출발역과 도착역을 구분하는 변수, 역 이름 목록이 들어있음
 
 class _HomePageState extends State<HomePage> {
-  //지금 터치한 위젯이 출발역 위젯이냐, 도착역 위젯이냐에 따라서
-  //stationList에서 앱바타이틀과, 역 선택 했을 시 그 역 이름을 어디 변수에 넣을것인가가 달라짐.
-  bool departOrArrive = true;
-  //기본값으로 출발역 위젯 true라고 치고, 도착역 위젯을 false라고 치자
-  //만약 출발역 위젯을 터치했을 땐 departOrArrive를 true로 설정하고,
-  //도착역 위젯을 터치했을 땐 departOrArrive를 false로 설정하는 콜백함수를 만들어야 함.
   void setDepartOrArrive(bool newValue) {
     setState(() {
       stationBoxData.departOrArrive = newValue;
